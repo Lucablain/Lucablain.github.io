@@ -1,0 +1,27 @@
+<div style="z-index: 3000; height: 50px; width: 100%; background-color: rgba(54,53,54, 0.8); position: fixed; color: lightgrey; display: flex; border-bottom: 1px solid black"
+     *ngIf="this.path !== ''">
+  <div style="height: 50px; padding: 0px 15px; font-weight: 600; font-size: 25px; display: flex; align-items: center; border-right: 1px solid grey"
+       routerLink="home">
+    <img style="height: 40px;" src="{{schoolSelected.logo_min}}">
+    <div style="margin-left : 5px">{{schoolSelected.nom}}</div>
+  </div>
+  <div style="display: flex">
+    <div routerLink="/formations" (mouseenter)="deploy = true" (mouseleave)="deploy = false">
+      <div class="button">
+        Votre métier
+      </div>
+      <!-- <div *ngIf="deploy" style="display: block; width: 190px; height: 50px; border-right: 1px solid white; border-left: 1px solid white; background-color: rgba(255,255,255,0.6); position: absolute;">
+        hello
+      </div>-->
+    </div>
+    <div class="button" routerLink="/campus">
+      Découvrez notre campus
+    </div>
+    <div class="button" routerLink="/entreprises">
+      Entreprises
+    </div>
+    <div class="button" routerLink="/contact">
+      Contact
+    </div>
+  </div>
+</div>

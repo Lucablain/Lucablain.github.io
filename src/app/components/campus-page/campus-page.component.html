@@ -1,0 +1,34 @@
+<!-- <div style="position: absolute; top: 70px; left: 30px; z-index: 23412341;">
+  <div style="font-size: 55px; color: white; font-weight: 600">Espace </div>
+  <div style="font-size: 55px; color: white; font-weight: 300; line-height: 15px">CAMPUS</div>
+</div>
+
+<div class ="background" style="height: 35vh;">
+
+</div> -->
+
+<div class="background" xmlns="http://www.w3.org/1999/html">
+  <div class="container"
+       style="
+       background-position: center;
+       background-size: cover;
+       color: white;
+       grid-column: 1; display: grid; grid-template-rows: 33% 33% 33%; border-right: 1px solid grey; background-color: lightgrey; padding-top: 50px">
+    <div *ngIf="mapSelected === undefined" style="display: block; grid-row: 1/2;">
+      <div style="height: 100%;   padding: 25px; font-family: 'Work Sans', sans-serif; filter: brightness(1); border-bottom: 2px solid white; background-image: linear-gradient(to top, rgba(255,255,255,0), rgba(0,0,0,0.6) 80%), url('../assets/img/entreprise.jpg'); background-size: cover; background-position: center">
+        <div style="font-size: 40px; font-weight: 300; line-height: 15px">BIENVENUE</div>
+        <div style="font-size: 45px; font-weight: 300">sur le campus de</div>
+        <div style="font-size: 90px; font-weight: 700; line-height: 80px"> LILLE</div>
+      </div>
+    </div>
+    <div *ngIf="mapSelected === 'amphi'" style="grid-row: 1/4">
+      <iframe src="https://360player.io/p/WBrcmU/" frameborder="0" width=100% height=100% allowfullscreen
+              data-token="WBrcmU"></iframe>
+    </div>
+  </div>
+  <div class="container"
+       style="grid-column: 2; display: flex; align-items: center; justify-content: center;box-shadow: inset 5px 0px 20px 0px #c0c0c0;">
+    <app-map-dash></app-map-dash>
+  </div>
+</div>
+

@@ -1,0 +1,283 @@
+.mapContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animContent {
+  position: absolute;
+  top: -100vh;
+  width: 40vw;
+  height: 40vw;
+}
+
+.map {
+  z-index: 1;
+  mask: url('../../../assets/animations/map.svg');
+  clip-path: url('../../../assets/animations/map.svg');
+  mask-size: cover;
+  fill: red;
+  animation: dropDown 1s ease-out forwards;
+  background-color: grey;
+}
+
+.classes {
+  z-index: 4;
+  animation: dropDown2 1.5s ease-out forwards;
+  fill: white !important;
+  pointer-events: none;
+}
+
+.classes path {
+  pointer-events: fill;
+  transition: 2s;
+}
+
+.classes:hover path {
+  fill: red !important;
+  transform: translateY(-15px);
+}
+
+.amphi {
+  z-index: 3;
+  animation: dropDown2 1.8s ease-out forwards;
+  fill: white !important;
+  pointer-events: none;
+}
+
+.amphi path {
+  pointer-events: fill;
+  transition: 2s;
+}
+
+.amphi:hover path {
+  fill: red !important;
+  transform: translateY(-15px);
+}
+
+.info {
+  z-index: 3;
+  animation: dropDown2 1.8s ease-out forwards;
+  fill: white !important;
+  pointer-events: none;
+}
+
+.info path {
+  pointer-events: fill;
+  transition: 2s;
+}
+
+.info:hover path {
+  fill: red !important;
+  transform: translateY(-15px);
+}
+
+.sanit {
+  z-index: 1;
+  mask: url('../../../assets/animations/sanit.svg');
+  mask-size: cover;
+  animation: dropDown2 1.8s ease-out forwards;
+  background-color: grey;
+}
+
+.lab {
+  z-index: 42342;
+  animation: dropDown2 1.8s ease-out forwards;
+  fill: white !important;
+  pointer-events: none;
+}
+
+.lab path {
+  pointer-events: fill;
+  transition: 2s;
+}
+
+.lab:hover path {
+  fill: red !important;
+  transform: translateY(-15px);
+}
+
+.ifag {
+  z-index: 1;
+  animation: dropDown2 1.8s ease-out forwards;
+  fill: white !important;
+  pointer-events: none;
+}
+
+.ifag path {
+  pointer-events: fill;
+  transition: 2s;
+}
+
+.ifag:hover path {
+  fill: red !important;
+  transform: translateY(-15px);
+}
+
+.prof {
+  z-index: 2;
+  animation: dropDown2 1.6s ease-out forwards;
+  fill: white !important;
+  pointer-events: none;
+}
+
+.prof path {
+  pointer-events: fill;
+  transition: 2s;
+}
+
+.prof:hover path {
+  fill: red !important;
+  transform: translateY(-15px);
+}
+
+.reunion {
+  z-index: 2;
+  animation: dropDown2 1.3s ease-out forwards;
+  fill: white !important;
+  pointer-events: none;
+}
+
+.reunion path {
+  pointer-events: fill;
+  transition: 2s;
+}
+
+.reunion:hover path {
+  fill: red !important;
+  transform: translateY(-15px);
+}
+
+.bur1 {
+  z-index: 1;
+  animation: dropDown2 1.5s ease-out forwards;
+  fill: white !important;
+  pointer-events: none;
+}
+
+.bur1 path {
+  pointer-events: fill;
+  transition: 2s;
+}
+
+.bur1:hover path {
+  fill: red !important;
+  transform: translateY(-15px);
+}
+
+.bur2 {
+  z-index: 1;
+  animation: dropDown2 1.2s ease-out forwards;
+  fill: white !important;
+  pointer-events: none;
+}
+
+.bur2 path {
+  pointer-events: fill;
+  transition: 2s;
+}
+
+.bur2:hover path {
+  fill: red !important;
+  transform: translateY(-15px);
+}
+
+.bur3 {
+  z-index: 1;
+  animation: dropDown2 1.4s ease-out forwards;
+  fill: white !important;
+  pointer-events: none;
+}
+
+.bur3 path {
+  pointer-events: fill;
+  transition: 2s;
+}
+
+.bur3:hover path {
+  fill: red !important;
+  transform: translateY(-15px);
+}
+
+.bur4 {
+  z-index: 1;
+  animation: dropDown2 1.6s ease-out forwards;
+  fill: white !important;
+  pointer-events: none;
+}
+
+.bur4 path {
+  pointer-events: fill;
+  transition: 2s;
+}
+
+.bur4:hover path {
+  fill: red !important;
+  transform: translateY(-15px);
+}
+
+.bur5 {
+  z-index: 1;
+  animation: dropDown2 1.8s ease-out forwards;
+  fill: white !important;
+  pointer-events: none;
+}
+
+.bur5 path {
+  pointer-events: fill;
+  transition: 2s;
+}
+
+.bur5:hover path {
+  fill: red !important;
+  transform: translateY(-15px);
+}
+
+@keyframes dropDown {
+  from {
+    tranform: translateY(0px);
+    opacity: 0;
+
+  }
+  to {
+    transform: translateY(60vh);
+    opacity: 1;
+  }
+}
+
+@keyframes dropDown2 {
+  from {
+    tranform: translateY(0px);
+  }
+  to {
+    transform: translateY(calc(60vh - 15px));
+  }
+}
+
+.title {
+  position: absolute;
+  animation: appear 1 ease-out forwards;
+  top: 2vw;
+  left: 2vw;
+  font-size: 30px;
+  font-weight: 800;
+  color: grey;
+  font-family: 'Work Sans', sans-serif;
+}
+
+
+.title::first-letter {
+  font-size: 40px;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

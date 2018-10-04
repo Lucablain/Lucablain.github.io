@@ -1,0 +1,48 @@
+<div class="container">
+  <div style="position: absolute; top: 30px; left: 30px; z-index: 23412341;">
+    <div style="font-size: 55px; color: white; font-weight: 600">HEP</div>
+    <div style="font-size: 55px; color: white; font-weight: 300; line-height: 15px">EDUCATION</div>
+    <div style="font-size: 55px; color: white; font-weight: 300; line-height: 100px">CAMPUS DE</div>
+    <div style="font-size: 55px; color: white; font-weight: 300; line-height: 10px">LILLE</div>
+  </div>
+  <div *ngFor="let school of schools" class="school" [ngStyle]="{ 'background-image': 'url(' + school.img + ')'}"
+       [ngClass]="{'overlay': school.id !== schoolSelected.id}"
+       (mouseover)="selectSchool(school.id)">
+    <div style="width: 100%; height: 100%;">
+
+      <div class="schoolContent">
+        <div class="card" (click)="goToSchool()">
+          <div
+            style="border-radius: 3px; width: 100%; height: 100%;display: flex;align-items: center; justify-content: center">
+            <div style="padding: 20px;  display: flex;text-align: center; justify-content: center; height: 100%; width: 100%">
+              <div *ngIf="school.id === 1" class="logoContainer" [ngClass]="{'active': schoolSelected.id === school.id}">
+                <div class="animContent fond"></div>
+                <div class="animContent circle"></div>
+                <div class="animContent typo"></div>
+                <div class="animContent mainTypo"></div>
+              </div>
+
+              <div *ngIf="school.id === 2" class="logoContainer" [ngClass]="{'active': schoolSelected.id === school.id}">
+                <div class="animContent logo"></div>
+                <div class="animContent blue"></div>
+                <div class="animContent orange"></div>
+                <div class="animContent rose "></div>
+                <div class="animContent yellow"></div>
+                <div class="animContent blue"></div>
+                <div class="animContent blueL"></div>
+                <div class="animContent green"></div>
+                <div class="animContent purple  "></div>
+              </div>
+
+              <div *ngIf="school.id === 3" class="logoContainer" [ngClass]="{'active': schoolSelected.id === school.id}">
+                <div class="animContent ifagFont"></div>
+                <div class="animContent triangle"></div>
+                <div class="animContent triangle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
